@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Global Shapers & Navratri — Ahmedabad Guide</title>
+  <meta name="description" content="Global Shapers invite the world to Navratri in Ahmedabad — why we celebrate, how to Garba, what to wear, what to eat, and where to explore."/>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+
+  <style>
+    :root { --primary-orange:#F15A29; --warm-orange:#F4A261; --deep-purple:#6A0572; --cream-bg:#FEF9F3; }
+    *{box-sizing:border-box}
+    body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;background:var(--cream-bg);color:#1a1a1a;line-height:1.6}
+    .smooth-scroll{scroll-behavior:smooth}
+    .gradient-bg{background:linear-gradient(135deg,var(--primary-orange) 0%,var(--warm-orange) 50%,var(--deep-purple) 100%)}
+    .text-gradient{background:linear-gradient(135deg,var(--primary-orange),var(--deep-purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .section-padding{padding:4rem 0}
+    .nav-fixed{position:sticky;top:0;z-index:1000;background:rgba(254,249,243,.95);backdrop-filter:blur(10px);border-bottom:1px solid rgba(0,0,0,.1)}
+    .card-hover{transition:transform .3s cubic-bezier(.4,0,.2,1),box-shadow .3s cubic-bezier(.4,0,.2,1)}
+    .card-hover:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(0,0,0,.08)}
+    .btn{display:inline-block;padding:.8rem 1.4rem;border-radius:9999px;font-weight:700;transition:all .2s ease;transform:scale(1)}
+    .btn-primary{background:var(--primary-orange);color:#fff}
+    .btn-primary:hover{background:var(--deep-purple);transform:scale(1.05)}
+    .btn-ghost{background:rgba(255,255,255,.15);color:#fff;border:1px solid rgba(255,255,255,.3)}
+    .weather-widget{background:linear-gradient(135deg,var(--warm-orange),var(--primary-orange));color:#fff;border-radius:16px;padding:1.25rem}
+    .fade-in{opacity:0;transform:translateY(24px);transition:all .6s ease}
+    .fade-in.visible{opacity:1;transform:translateY(0)}
+
+    /* Cinematic YouTube background */
+    .cinema{position:relative;isolation:isolate;border-radius:24px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.18)}
+    .cinema .bg-iframe{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;border:0;transform:scale(1.02)}
+    .cinema::after{content:"";position:absolute;inset:0;background:radial-gradient(80% 70% at 50% 20%,rgba(0,0,0,.25) 0%,rgba(0,0,0,.6) 100%)}
+    .cinema .poster{width:100%;height:56.25vw;max-height:72vh;object-fit:cover;display:none}
+    @media (max-width:768px){.cinema .bg-iframe{display:none}.cinema .poster{display:block}}
+    .cinema-caption{position:relative;z-index:2;display:grid;place-items:center;text-align:center;color:#fff;padding:3rem 1rem;min-height:clamp(360px,56.25vw,72vh)}
+    .badge-soft{display:inline-flex;align-items:center;gap:.5rem;font-size:.85rem;background:rgba(255,255,255,.14);color:#fff;padding:.5rem .85rem;border-radius:999px;border:1px solid rgba(255,255,255,.25);backdrop-filter:blur(4px)}
+
+    /* Motion cards */
+    .motion-card{background:#fff;border-radius:16px;padding:1.25rem;border-left:4px solid var(--primary-orange);box-shadow:0 8px 28px rgba(0,0,0,.07);transform:translateY(16px);opacity:0;transition:all .6s ease}
+    .motion-card.visible{transform:translateY(0);opacity:1}
+
+    /* Responsive video */
+    .video-frame{position:relative;width:100%;padding-top:56.25%;border-radius:16px;overflow:hidden;background:#000;box-shadow:0 12px 40px rgba(0,0,0,.12)}
+    .video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+    /* Masonry gallery + lightbox */
+    .gallery-masonry{columns:1;column-gap:1rem}
+    @media (min-width:640px){.gallery-masonry{columns:2}}
+    @media (min-width:1024px){.gallery-masonry{columns:3}}
+    .gallery-card{break-inside:avoid;background:#fff;border-radius:14px;overflow:hidden;margin:0 0 1rem;box-shadow:0 8px 24px rgba(0,0,0,.08)}
+    .gallery-card img{width:100%;height:auto;display:block}
+    .gallery-card .cap{padding:.65rem .9rem;font-size:.9rem;color:#475569}
+    .lb-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.75);display:none;align-items:center;justify-content:center;z-index:9999}
+    .lb-backdrop.active{display:flex}
+    .lb-inner{max-width:92vw;max-height:90vh}
+    .lb-inner img{max-width:100%;max-height:90vh;border-radius:12px;box-shadow:0 18px 60px rgba(0,0,0,.35)}
+    .lb-close{position:fixed;top:16px;right:20px;background:rgba(0,0,0,.5);color:#fff;border:none;border-radius:999px;padding:.5rem .8rem;font-size:.95rem;cursor:pointer}
+
+    /* Utilities */
+    .chip{display:inline-flex;align-items:center;gap:.5rem;font-size:.85rem;padding:.35rem .7rem;border-radius:999px;background:#fff;color:#374151;border:1px solid rgba(0,0,0,.08)}
+    .maps-btn{display:inline-flex;align-items:center;gap:.45rem;font-weight:600;padding:.55rem .9rem;border-radius:999px;background:var(--primary-orange);color:#fff}
+    .maps-btn:hover{background:var(--deep-purple)}
+
+    /* Color-of-the-Day ribbon */
+    .colors-ribbon{display:grid;grid-template-columns:repeat(9,1fr);border-radius:12px;overflow:hidden}
+    .colors-ribbon div{height:12px}
+    .c1{background:#fdd835}.c2{background:#2e7d32}.c3{background:#9e9e9e}.c4{background:#f57c00}.c5{background:#fafafa}.c6{background:#c62828}.c7{background:#0d47a1}.c8{background:#ec407a}.c9{background:#6a1b9a}
+
+    /* Venue slider */
+    .slider{position:relative;overflow:hidden;border-radius:16px}
+    .slides{display:flex;transition:transform .6s ease}
+    .slide{min-width:100%;background:#fff}
+    .slider-nav{position:absolute;inset-inline:0;top:50%;display:flex;justify-content:space-between;transform:translateY(-50%);padding:0 8px}
+    .nav-btn{background:rgba(0,0,0,.5);color:#fff;border:none;border-radius:999px;width:36px;height:36px;display:grid;place-items:center}
+  </style>
+</head>
+
+<body class="smooth-scroll">
+
+  <!-- NAV -->
+  <nav class="nav-fixed">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <h1 class="text-xl font-extrabold text-gradient">Global Shapers & Navratri</h1>
+        <div class="hidden md:block">
+          <div class="ml-10 flex items-baseline space-x-6 text-sm font-medium">
+            <a href="#hero" class="hover:text-orange-500">Home</a>
+            <a href="#about" class="hover:text-orange-500">About</a>
+            <a href="#heritage" class="hover:text-orange-500">Heritage</a>
+            <a href="#navratri" class="hover:text-orange-500">Navratri</a>
+            <a href="#nine" class="hover:text-orange-500">Nine Days</a>
+            <a href="#garba" class="hover:text-orange-500">Garba 101</a>
+            <a href="#venues" class="hover:text-orange-500">Venues</a>
+            <a href="#wear" class="hover:text-orange-500">Fashion</a>
+            <a href="#food" class="hover:text-orange-500">Food</a>
+            <a href="#explore" class="hover:text-orange-500">Explore</a>
+            <a href="#tips" class="hover:text-orange-500">Tips</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero" class="gradient-bg min-h-screen flex items-center justify-center text-white relative overflow-hidden">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">Ahmedabad & Navratri</h1>
+      <p class="text-xl md:text-2xl mb-8 font-light max-w-4xl mx-auto">Global Shapers invite the world to the biggest dance festival — nine nights of Garba, culture, and community in Ahmedabad.</p>
+      <div class="mt-4 flex items-center justify-center gap-3">
+        <a href="https://chat.whatsapp.com/GKosJluLhBTCSCQWAPnJ08" target="_blank" rel="noopener" class="btn btn-primary">Join Visiting Shapers WhatsApp Group</a>
+        <a href="#navratri" class="btn btn-ghost">See the Navratri experience</a>
+      </div>
+      <div class="weather-widget max-w-md mx-auto mt-10" id="weather-widget">
+        <div class="flex items-center justify-between mb-2">
+          <h3 class="text-lg font-semibold">Weather in Ahmedabad</h3>
+          <i class="fas fa-sun text-2xl"></i>
+        </div>
+        <div id="weather-content">
+          <div class="text-2xl font-bold" id="temperature">Loading...</div>
+          <div class="text-sm opacity-90" id="description">Getting current weather...</div>
+        </div>
+      </div>
+    </div>
+    <div class="absolute inset-0 opacity-10 pointer-events-none">
+      <div class="absolute top-10 left-10 w-20 h-20 border-2 border-white rounded-full animate-pulse"></div>
+      <div class="absolute top-1/3 right-20 w-16 h-16 border-2 border-white rounded-full animate-pulse delay-1000"></div>
+      <div class="absolute bottom-20 left-1/4 w-12 h-12 border-2 border-white rounded-full animate-pulse delay-500"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section-padding">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl md:text-5xl font-bold text-gradient mb-3">About Ahmedabad</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">India’s first UNESCO World Heritage City — living pols and carved havelis meet riverfront promenades and a modern metro.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="card-hover bg-white rounded-2xl p-8 shadow-lg">
+          <div class="text-4xl mb-4" style="color: var(--primary-orange);"><i class="fas fa-city"></i></div>
+          <h3 class="text-xl font-semibold mb-2">City of Contrasts</h3>
+          <p class="text-gray-600">Startups and towers alongside centuries-old neighborhoods (pols) and ornate havelis.</p>
+        </div>
+        <div class="card-hover bg-white rounded-2xl p-8 shadow-lg">
+          <div class="text-4xl mb-4" style="color: var(--warm-orange);"><i class="fas fa-water"></i></div>
+          <h3 class="text-xl font-semibold mb-2">Sabarmati Banks</h3>
+          <p class="text-gray-600">Public riverfront, parks and cycle tracks — perfect for golden-hour strolls.</p>
+        </div>
+        <div class="card-hover bg-white rounded-2xl p-8 shadow-lg">
+          <div class="text-4xl mb-4" style="color: var(--deep-purple);"><i class="fas fa-award"></i></div>
+          <h3 class="text-xl font-semibold mb-2">UNESCO Heritage</h3>
+          <p class="text-gray-600">Recognized for architectural heritage and cultural significance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HERITAGE -->
+  <section id="heritage" class="section-padding bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl md:text-5xl font-bold text-gradient mb-3">Heritage & History</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">From 1411 to today — trade, crafts, freedom struggle, and global recognition.</p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-white rounded-2xl p-8 shadow-lg">
+          <h3 class="text-2xl font-bold mb-3" style="color: var(--primary-orange);">1411: Foundation</h3>
+          <p class="text-gray-700">Sultan Ahmad Shah founded Ahmedabad on the Sabarmati; it grew into a hub for trade, crafts and learning.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-8 shadow-lg">
+          <h3 class="text-2xl font-bold mb-3" style="color: var(--deep-purple);">2017: UNESCO</h3>
+          <p class="text-gray-700">Declared India’s first UNESCO World Heritage City — a living urban heritage.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NAVRATRI: CINEMATIC + HISTORY + WHY GARBA -->
+  <section id="navratri" class="section-padding">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Cinematic hero (YouTube from 3:33) -->
+      <div class="cinema mb-10">
+        <iframe class="bg-iframe" title="Navratri Ahmedabad Cinematic"
+          src="https://www.youtube.com/embed/eLSnaNnhMp8?start=213&autoplay=1&mute=1&controls=0&showinfo=0&rel=0&loop=1&playlist=eLSnaNnhMp8&playsinline=1&modestbranding=1"
+          allow="autoplay; encrypted-media; picture-in-picture; fullscreen"></iframe>
+        <!-- Poster (mobile fallback) -->
+        <img class="poster js-safe" 
+             src="https://images.unsplash.com/photo-1603454861452-22a9c7e6f2c8?w=1600&q=80&auto=format&fit=crop"
+             data-alt-src="https://upload.wikimedia.org/wikipedia/commons/8/81/Garba_Navratri_01.jpg"
+             alt="Navratri Garba in Ahmedabad"/>
+        <div class="cinema-caption">
+          <div>
+            <span class="badge-soft">Nine Nights • One Rhythm</span>
+            <h2 class="mt-3 text-3xl md:text-5xl font-extrabold">Navratri in Ahmedabad</h2>
+            <p class="mt-3 max-w-2xl mx-auto text-lg opacity-95">Circles of devotion, the thump of the dhol, mirror-work swirling under the lights — when joy becomes worship.</p>
+            <div class="mt-4 flex items-center justify-center gap-3">
+              <a href="#nine" class="btn btn-primary">Understand the Nine Days</a>
+              <a href="#garba" class="btn btn-ghost">Learn Garba Basics</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Color-of-the-Day Ribbon -->
+      <div class="colors-ribbon mb-8">
+        <div class="c1"></div><div class="c2"></div><div class="c3"></div><div class="c4"></div><div class="c5"></div>
+        <div class="c6"></div><div class="c7"></div><div class="c8"></div><div class="c9"></div>
+      </div>
+
+      <!-- History & Mythology + Why Garba -->
+      <div class="grid lg:grid-cols-3 gap-6 mb-10">
+        <div class="motion-card lg:col-span-2">
+          <h3 class="text-2xl font-bold mb-2 text-gradient">History & Mythology</h3>
+          <p class="text-gray-700">“Nav-ratri” means Nine Nights — dedicated to <b>Shakti</b>, the Divine Feminine. In the <i>Devi Mahatmya</i>, the Goddess (Durga/Ambe Maa) battles and defeats the buffalo-demon <b>Mahishasura</b> over nine nights; the tenth day is <b>Vijayadashami</b> (victory of good over evil). In Gujarat, devotion meets dance: communities gather nightly to sing aarti and dance <b>Garba</b> around the symbolic <b>garbo</b> (earthen lamp/pot) — life’s energy at the center.</p>
+          <div class="mt-4 flex gap-2 flex-wrap">
+            <span class="chip">Shakti</span><span class="chip">Ambe Maa</span><span class="chip">Vijayadashami</span><span class="chip">Garbo (lamp)</span>
+          </div>
+        </div>
+        <div class="motion-card">
+          <h3 class="text-2xl font-bold mb-2" style="color:var(--primary-orange)">Why we do Garba</h3>
+          <p class="text-gray-700">Circles symbolize the cosmos — no beginning or end. Dancing around the lamp honors the Goddess at the center of life. The claps mark rhythm and community; the circle makes everyone a participant. It’s devotion (bhakti), cardio, and community — all in one.</p>
+        </div>
+      </div>
+
+      <!-- Ambe Maa + Garba images (with robust fallbacks) -->
+      <div class="grid md:grid-cols-3 gap-6">
+        <figure class="gallery-card">
+          <img class="js-safe" loading="lazy"
+               src="https://images.unsplash.com/photo-1633869278185-b041f595a94e?w=1600&q=80&auto=format&fit=crop"
+               data-alt-src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Durga_on_lion_-_Kolkata_2011-10-01_1146.JPG"
+               alt="Ambe Maa / Durga">
+          <figcaption class="cap">Ambe Maa — the form of Shakti honored in Navratri.</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <img class="js-safe" loading="lazy"
+               src="https://upload.wikimedia.org/wikipedia/commons/8/81/Garba_Navratri_01.jpg"
+               data-alt-src="https://images.unsplash.com/photo-1542909168-82c3e7fdca5c?w=1600&q=80&auto=format&fit=crop"
+               alt="Garba at GMDC grounds">
+          <figcaption class="cap">Garba at GMDC grounds, Ahmedabad.</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <img class="js-safe" loading="lazy"
+               src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Navratri_Garba.jpg"
+               data-alt-src="https://images.unsplash.com/photo-1605721911519-3dfeb3be25e0?w=1600&q=80&auto=format&fit=crop"
+               alt="Navratri Garba circle">
+          <figcaption class="cap">Concentric circles and rising tempo.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE NINE DAYS -->
+  <section id="nine" class="section-padding bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <h2 class="text-4xl md:text-5xl font-bold text-gradient mb-2">The Nine Days of Navratri</h2>
+        <p class="text-lg text-gray-600">Forms of the Goddess often honored in Gujarat (colors vary by tradition/region).</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-2xl p-6 shadow-lg card-hover"><h4 class="font-bold mb-1"><span style="color:var(--primary-orange)">Day 1:</span> Shailaputri</h4><p class="text-sm text-gray-700">Daughter of the mountains; purity and purpose. <i>Color:</i> Yellow.</p></div>
+        <div class="bg-white rounded-2xl p-6 shadow-lg card-hover"><h4 class="font-bold mb-1"><span style="color:var(--warm-orange)">Day 2:</span> Brahmacharini</h4><p class="text-sm text-gray-700">Tapas (penance), devotion. <i>Color:</i> Green.</p></div>
+        <div class="bg-white rounded-2xl p-6 shadow-lg card-hover"><h4 class="font-bold mb-1"><span style="color:var(--deep-purple)">Day 3:</span> Chandraghanta</h4><p class="text-sm text-gray-700">Courage, grace in adversity. <i>Color:</i> Gray.</p></div>
+        <div class="bg-white rounded-2xl p-6 shadow-lg card-hover"><h4 class="font-bold mb-1"><span style="color:var(--primary-orange)">Day 4:</span> Kushmanda</h4><p class="text-sm text-gray-700">Cosmic creative energy. <i>Color:</i> Orange.</p></div>
+        <div class="bg-white rounded-2xl p-6 shadow-lg card-hover"><h4 class="font-bold mb-1"><span style="color:var(--warm-orange)">Day 5:</span> Skandamata</h4><p class="text-sm text-gray-700">Motherly compassion. <i>Color:</i> White.</p></div>
+        <div class="bg-white rounded-2xl p-6 shadow-lg card-hover"><h4 class="font-bold mb-1"><span style="color:var(--deep-purple)">Day 6:</span> Katyayani</h4><p class="text-sm text-gray-700">Strength and resolve. <i>Color:</i> Red.</p></div>
+        <div class="bg-white rounded-2xl p-6 shadow-lg card-hover"><h4 class="font-bold mb-1"><span style="color:var(--primary-orange)">Day 7:</span> Kalaratri</h4><p class="text-sm text-gray-700">Fierce protector; destroys fear. <i>Color:</i> Royal Blue.</p></div>
+        <div class="bg-white rounded-2xl p-6 shadow-lg card-hover"><h4 class="font-bold mb-1"><span style="color:var(--warm-orange)">Day 8:</span> Mahagauri</h4><p class="text-sm text-gray-700">Serenity and purity. <i>Color:</i> Pink.</p></div>
+        <div class="bg-white rounded-2xl p-6 shadow-lg card-hover"><h4 class="font-bold mb-1"><span style="color:var(--deep-purple)">Day 9:</span> Siddhidatri</h4><p class="text-sm text-gray-700">Blessings and fulfillment. <i>Color:</i> Purple.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GARBA 101 -->
+  <section id="garba" class="section-padding">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <h2 class="text-4xl md:text-5xl font-bold text-gradient mb-2">Garba 101</h2>
+        <p class="text-lg text-gray-600">Dance with rhythm, respect, and joy.</p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8 mb-10 items-center">
+        <div class="motion-card">
+          <h3 class="font-semibold text-xl mb-2">Steps</h3>
+          <p class="text-sm text-gray-700 mb-2">Start with <b>be-taali</b> (two-clap), try <b>dodhiyu</b> (spin-and-clap), move to <b>tran-taali</b>.</p>
+          <ul class="text-sm text-gray-700 space-y-1">
+            <li>✓ Join from the outer edge; match the tempo.</li>
+            <li>✓ Gentle taps in dandiya; keep spacing.</li>
+            <li>✓ Hydrate, light fabrics, comfy shoes.</li>
+          </ul>
+        </div>
+        <div class="video-frame">
+          <iframe src="https://www.youtube.com/embed/eLSnaNnhMp8?start=213&rel=0&modestbranding=1&playsinline=1"
+                  title="Garba Tutorial" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <!-- Attire images (robust) -->
+      <div class="grid md:grid-cols-3 gap-6">
+        <figure class="gallery-card">
+          <img class="js-safe" loading="lazy"
+               src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Traditional_Folk_dance_garba_dress.jpg"
+               data-alt-src="https://images.unsplash.com/photo-1600700915925-8b0fb1923112?w=1600&q=80&auto=format&fit=crop"
+               alt="Kediyu and Chaniya Choli">
+          <figcaption class="cap">Traditional Garba attire — <b>kediyu</b> (men) & <b>chaniya choli</b> (women).</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <img class="js-safe" loading="lazy"
+               src="https://upload.wikimedia.org/wikipedia/commons/3/34/Garba_in_Ahmedabad.jpg"
+               data-alt-src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?w=1600&q=80&auto=format&fit=crop"
+               alt="Garba in Ahmedabad attire">
+          <figcaption class="cap">Mirror work, bandhani, and bright palettes.</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <img class="js-safe" loading="lazy"
+               src="https://upload.wikimedia.org/wikipedia/commons/b/b5/Gagra_choli.jpg"
+               data-alt-src="https://images.unsplash.com/photo-1583394293214-28a4b3b10b3f?w=1600&q=80&auto=format&fit=crop"
+               alt="Gagra/Chaniya choli">
+          <figcaption class="cap">Swirl-friendly silhouettes.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- VENUE SPOTLIGHT SLIDER -->
+  <section id="venues" class="section-padding bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-8">
+        <h2 class="text-4xl md:text-5xl font-bold text-gradient mb-2">Garba Venues — Spotlight</h2>
+        <p class="text-lg text-gray-600">Big circles, big energy. (Check event pages for tickets.)</p>
+      </div>
+
+      <div class="slider bg-white shadow-lg">
+        <div class="slides" id="slides">
+          <!-- Slide 1: GMDC -->
+          <div class="slide p-6 md:p-10 grid md:grid-cols-2 gap-6 items-center">
+            <div>
+              <h3 class="text-2xl font-bold mb-2" style="color:var(--primary-orange)">GMDC Ground</h3>
+              <p class="text-gray-700 mb-3">Massive crowds, classic Garba feel, city’s favorite energy.</p>
+              <a class="maps-btn" href="https://www.google.com/maps/search/?api=1&query=GMDC+Ground,+Ahmedabad" target="_blank" rel="noopener"><i class="fa-solid fa-location-dot"></i> Open in Maps</a>
+            </div>
+            <figure class="gallery-card m-0">
+              <img class="js-safe" loading="lazy"
+                   src="https://upload.wikimedia.org/wikipedia/commons/8/81/Garba_Navratri_01.jpg"
+                   data-alt-src="https://images.unsplash.com/photo-1542909168-82c3e7fdca5c?w=1600&q=80&auto=format&fit=crop"
+                   alt="GMDC Garba">
+            </figure>
+          </div>
+          <!-- Slide 2: Karnavati Club -->
+          <div class="slide p-6 md:p-10 grid md:grid-cols-2 gap-6 items-center">
+            <div>
+              <h3 class="text-2xl font-bold mb-2" style="color:var(--deep-purple)">Karnavati Club</h3>
+              <p class="text-gray-700 mb-3">Premium production, curated music, great crowd management.</p>
+              <a class="maps-btn" href="https://www.google.com/maps/search/?api=1&query=Karnavati+Club,+Ahmedabad" target="_blank" rel="noopener"><i class="fa-solid fa-location-dot"></i> Open in Maps</a>
+            </div>
+            <figure class="gallery-card m-0">
+              <img class="js-safe" loading="lazy"
+                   src="https://images.unsplash.com/photo-1533105079780-92b9be482077?w=1600&q=80&auto=format&fit=crop"
+                   data-alt-src="https://images.unsplash.com/photo-1511765224389-37f0e77cf0eb?w=1600&q=80&auto=format&fit=crop"
+                   alt="Karnavati Club ambience">
+            </figure>
+          </div>
+          <!-- Slide 3: YMCA -->
+          <div class="slide p-6 md:p-10 grid md:grid-cols-2 gap-6 items-center">
+            <div>
+              <h3 class="text-2xl font-bold mb-2" style="color:var(--warm-orange)">YMCA Grounds</h3>
+              <p class="text-gray-700 mb-3">Popular public nights with family-friendly vibes.</p>
+              <a class="maps-btn" href="https://www.google.com/maps/search/?api=1&query=YMCA+Club,+Ahmedabad" target="_blank" rel="noopener"><i class="fa-solid fa-location-dot"></i> Open in Maps</a>
+            </div>
+            <figure class="gallery-card m-0">
+              <img class="js-safe" loading="lazy"
+                   src="https://images.unsplash.com/photo-1508606572321-901ea443707f?w=1600&q=80&auto=format&fit=crop"
+                   data-alt-src="https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?w=1600&q=80&auto=format&fit=crop"
+                   alt="YMCA Grounds night">
+            </figure>
+          </div>
+        </div>
+
+        <div class="slider-nav">
+          <button class="nav-btn" id="prev" aria-label="Previous slide"><i class="fa-solid fa-chevron-left"></i></button>
+          <button class="nav-btn" id="next" aria-label="Next slide"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT TO WEAR (kept lighter; info + maps) -->
+  <section id="wear" class="section-padding">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl md:text-5xl font-bold text-gradient mb-2">What to Wear</h2>
+        <p class="text-xl text-gray-600">Look good, move free, feel festive.</p>
+      </div>
+      <div class="grid lg:grid-cols-2 gap-12">
+        <div class="bg-white rounded-2xl p-8 shadow-lg">
+          <h3 class="text-2xl font-bold mb-4" style="color:var(--primary-orange)">For Women</h3>
+          <p class="text-gray-700 mb-4"><b>Chaniya choli</b> with mirror work, bandhani, ajrakh, or kutchi patchwork; oxidized silver jewellery. Fusion welcome — lehenga + jacket.</p>
+          <div class="flex gap-2 flex-wrap"><span class="chip">Mirror work</span><span class="chip">Bandhani</span><span class="chip">Ajrakh</span><span class="chip">Oxidized silver</span></div>
+          <figure class="gallery-card mt-4">
+            <img class="js-safe" loading="lazy"
+                 src="https://images.unsplash.com/photo-1600751897703-6bf8886f3b9d?w=1600&q=80&auto=format&fit=crop"
+                 data-alt-src="https://upload.wikimedia.org/wikipedia/commons/b/b5/Gagra_choli.jpg"
+                 alt="Chaniya choli example">
+          </figure>
+        </div>
+        <div class="bg-white rounded-2xl p-8 shadow-lg">
+          <h3 class="text-2xl font-bold mb-4" style="color:var(--deep-purple)">For Men</h3>
+          <p class="text-gray-700 mb-4"><b>Kediyu & chorno</b> or a bold kurta with stole; add a turban if you like. Sneakers or cushioned mojaris for long nights.</p>
+          <div class="flex gap-2 flex-wrap"><span class="chip">Kediyu</span><span class="chip">Nehru jacket</span><span class="chip">Ajrakh</span><span class="chip">Mojari</span></div>
+          <figure class="gallery-card mt-4">
+            <img class="js-safe" loading="lazy"
+                 src="https://images.unsplash.com/photo-1520975922284-6c0b2640b8f0?w=1600&q=80&auto=format&fit=crop"
+                 data-alt-src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Traditional_Folk_dance_garba_dress.jpg"
+                 alt="Kediyu & kurta styles">
+          </figure>
+        </div>
+      </div>
+
+      <!-- Where to shop -->
+      <div class="mt-12">
+        <h3 class="text-2xl font-bold mb-4 text-gradient">Where to Shop</h3>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="bg-white rounded-xl p-6 shadow-lg card-hover">
+            <h4 class="font-bold mb-2" style="color:var(--primary-orange)">Law Garden Night Market</h4>
+            <p class="text-sm text-gray-600 mb-3">Affordable outfits & jewellery.</p>
+            <a class="maps-btn" href="https://www.google.com/maps/search/?api=1&query=Law+Garden,+Ahmedabad" target="_blank" rel="noopener"><i class="fa-solid fa-location-dot"></i> Open in Maps</a>
+          </div>
+          <div class="bg-white rounded-xl p-6 shadow-lg card-hover">
+            <h4 class="font-bold mb-2" style="color:var(--warm-orange)">Rani no Hajiro</h4>
+            <p class="text-sm text-gray-600 mb-3">Oxidized silver & antiques.</p>
+            <a class="maps-btn" href="https://www.google.com/maps/search/?api=1&query=Rani+no+Hajiro,+Ahmedabad" target="_blank" rel="noopener"><i class="fa-solid fa-location-dot"></i> Open in Maps</a>
+          </div>
+          <div class="bg-white rounded-xl p-6 shadow-lg card-hover">
+            <h4 class="font-bold mb-2" style="color:var(--deep-purple)">CG Road Boutiques</h4>
+            <p class="text-sm text-gray-600 mb-3">Contemporary festive wear.</p>
+            <a class="maps-btn" href="https://www.google.com/maps/search/?api=1&query=CG+Road,+Ahmedabad" target="_blank" rel="noopener"><i class="fa-solid fa-location-dot"></i> Explore</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT TO EAT (concise) -->
+  <section id="food" class="section-padding bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl md:text-5xl font-bold text-gradient mb-2">What to Eat</h2>
+        <p class="text-xl text-gray-600">Quick hits to fuel your nights.</p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white rounded-lg p-5 shadow-lg"><h4 class="font-semibold mb-1">Fafda–Jalebi</h4><p class="text-sm text-gray-600 mb-2">Iscon Gathiya</p><a class="maps-btn" href="https://www.google.com/maps/search/?api=1&query=Iscon+Gathiya,+Satellite,+Ahmedabad" target="_blank" rel="noopener"><i class="fa-solid fa-location-dot"></i> Open</a></div>
+        <div class="bg-white rounded-lg p-5 shadow-lg"><h4 class="font-semibold mb-1">Gujarati Thali</h4><p class="text-sm text-gray-600 mb-2">Agashiye / Vishalla</p><a class="maps-btn" href="https://www.google.com/maps/search/?api=1&query=Agashiye,+House+of+MG,+Ahmedabad" target="_blank" rel="noopener"><i class="fa-solid fa-location-dot"></i> Agashiye</a> <a class="maps-btn ml-1 mt-2" href="https://www.google.com/maps/search/?api=1&query=Vishalla,+Ahmedabad" target="_blank" rel="noopener"><i class="fa-solid fa-location-dot"></i> Vishalla</a></div>
+        <div class="bg-white rounded-lg p-5 shadow-lg"><h4 class="font-semibold mb-1">Manek Chowk (Late-night)</h4><p class="text-sm text-gray-600 mb-2">Chocolate Cheese Sandwich, Pulav</p><a class="maps-btn" href="https://www.google.com/maps/search/?api=1&query=Manek+Chowk,+Ahmedabad" target="_blank" rel="noopener"><i class="fa-solid fa-location-dot"></i> Open</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPLORE -->
+  <section id="explore" class="section-padding">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl md:text-5xl font-bold text-gradient mb-2">Explore the City</h2>
+        <p class="text-xl text-gray-600">Beyond the dance floor.</p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white rounded-xl p-6 shadow-lg card-hover">
+          <h4 class="font-bold mb-1">Sabarmati Riverfront</h4>
+          <a class="maps-btn mt-1 inline-flex" href="https://www.google.com/maps/search/?api=1&query=Sabarmati+Riverfront,+Ahmedabad" target="_blank" rel="noopener"><i class="fa-solid fa-location-dot"></i> Open</a>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-lg card-hover">
+          <h4 class="font-bold mb-1">Adalaj Stepwell</h4>
+          <a class="maps-btn mt-1 inline-flex" href="https://www.google.com/maps/search/?api=1&query=Adalaj+Stepwell,+Gandhinagar" target="_blank" rel="noopener"><i class="fa-solid fa-location-dot"></i> Open</a>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-lg card-hover">
+          <h4 class="font-bold mb-1">Sidi-Saiyyed Mosque</h4>
+          <a class="maps-btn mt-1 inline-flex" href="https://www.google.com/maps/search/?api=1&query=Sidi+Saiyyed+Mosque,+Ahmedabad" target="_blank" rel="noopener"><i class="fa-solid fa-location-dot"></i> Open</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIBE GALLERY (extra images with fallbacks) -->
+  <section id="vibe-gallery" class="section-padding">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <h2 class="text-4xl md:text-5xl font-bold text-gradient mb-2">The Vibe in Pictures</h2>
+        <p class="text-lg text-gray-600">Colors, mirrors, circles — Ahmedabad’s Navratri comes alive.</p>
+      </div>
+      <div class="gallery-masonry">
+        <figure class="gallery-card">
+          <img class="js-safe" loading="lazy"
+               src="https://upload.wikimedia.org/wikipedia/commons/8/81/Garba_Navratri_01.jpg"
+               data-alt-src="https://images.unsplash.com/photo-1542909168-82c3e7fdca5c?w=1600&q=80&auto=format&fit=crop"
+               alt="Garba GMDC"/>
+          <figcaption class="cap">GMDC grounds, Ahmedabad.</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <img class="js-safe" loading="lazy"
+               src="https://upload.wikimedia.org/wikipedia/commons/3/34/Garba_in_Ahmedabad.jpg"
+               data-alt-src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?w=1600&q=80&auto=format&fit=crop"
+               alt="Garba in Ahmedabad"/>
+          <figcaption class="cap">Community, rhythm, joy.</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <img class="js-safe" loading="lazy"
+               src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Navratri_Garba.jpg"
+               data-alt-src="https://images.unsplash.com/photo-1605721911519-3dfeb3be25e0?w=1600&q=80&auto=format&fit=crop"
+               alt="Garba circles"/>
+          <figcaption class="cap">Concentric circles of devotion.</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <img class="js-safe" loading="lazy"
+               src="https://images.unsplash.com/photo-1600751897703-6bf8886f3b9d?w=1600&q=80&auto=format&fit=crop"
+               data-alt-src="https://upload.wikimedia.org/wikipedia/commons/b/b5/Gagra_choli.jpg"
+               alt="Chaniya choli"/>
+          <figcaption class="cap">Swirl-friendly silhouettes.</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <img class="js-safe" loading="lazy"
+               src="https://images.unsplash.com/photo-1520975922284-6c0b2640b8f0?w=1600&q=80&auto=format&fit=crop"
+               data-alt-src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Traditional_Folk_dance_garba_dress.jpg"
+               alt="Kediyu & Kurta"/>
+          <figcaption class="cap">Attire inspiration.</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lb-backdrop" id="lb">
+      <button class="lb-close" aria-label="Close" id="lb-close">Close ✕</button>
+      <div class="lb-inner" id="lb-inner"></div>
+    </div>
+  </section>
+
+  <!-- TIPS -->
+  <section id="tips" class="section-padding bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl md:text-5xl font-bold text-gradient mb-2">Travel Tips & Essentials</h2>
+        <p class="text-xl text-gray-600">Quick Gujarati phrases, outfit checklist, and helplines.</p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white rounded-xl p-6 shadow-lg card-hover"><h4 class="font-semibold mb-2" style="color:var(--primary-orange)">Kem cho?</h4><p class="text-gray-600 text-sm">How are you?</p></div>
+        <div class="bg-white rounded-xl p-6 shadow-lg card-hover"><h4 class="font-semibold mb-2" style="color:var(--warm-orange)">Majama!</h4><p class="text-gray-600 text-sm">I’m good!</p></div>
+        <div class="bg-white rounded-xl p-6 shadow-lg card-hover"><h4 class="font-semibold mb-2" style="color:var(--deep-purple)">Aavo!</h4><p class="text-gray-600 text-sm">Welcome/Please come!</p></div>
+      </div>
+      <div class="mt-10 bg-white rounded-2xl p-8 shadow-lg">
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <h4 class="font-bold mb-4" style="color:var(--primary-orange)">Outfit Checklist — Women</h4>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li>✓ Chaniya choli + dupatta</li><li>✓ Statement jewellery</li><li>✓ Comfortable flats/mojris</li><li>✓ Hair ornaments, bindi</li><li>✓ Safety pins, compact mirror</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-bold mb-4" style="color:var(--deep-purple)">Outfit Checklist — Men</h4>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li>✓ Kediyu/kurta + dhoti/pajama</li><li>✓ Comfortable mojaris/shoes</li><li>✓ Mala/brooch</li><li>✓ Small bag, water bottle</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="mt-10">
+        <h3 class="text-3xl font-bold mb-6 text-center text-gradient">Emergency Information</h3>
+        <div class="bg-red-50 border border-red-200 rounded-2xl p-8">
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="text-center"><div class="text-2xl mb-2">🚨</div><h4 class="font-semibold mb-1">Police</h4><p class="text-lg font-bold text-red-600">100</p></div>
+            <div class="text-center"><div class="text-2xl mb-2">🚑</div><h4 class="font-semibold mb-1">Ambulance</h4><p class="text-lg font-bold text-red-600">108, 102</p></div>
+            <div class="text-center"><div class="text-2xl mb-2">👩</div><h4 class="font-semibold mb-1">Women’s Helpline</h4><p class="text-lg font-bold text-red-600">1091, 181</p></div>
+            <div class="text-center"><div class="text-2xl mb-2">🎒</div><h4 class="font-semibold mb-1">Lost & Found</h4><p class="text-sm text-gray-600">Ask help desk at major Garba venues</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="gradient-bg text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h3 class="text-3xl font-bold mb-3">Ready for Navratri?</h3>
+      <p class="text-lg mb-6 opacity-90">Let the rhythm of dhol guide your steps and the warmth of Ahmedabad welcome you home.</p>
+      <div class="flex justify-center space-x-8 text-3xl opacity-75">
+        <div class="animate-pulse">💃</div><div class="animate-pulse delay-300">🥁</div><div class="animate-pulse delay-500">✨</div><div class="animate-pulse delay-700">🎭</div><div class="animate-pulse delay-1000">🎉</div>
+      </div>
+      <p class="mt-6 text-sm opacity-80">© 2024 Ahmedabad & Navratri Guide by Global Shapers Ahmedabad.</p>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script>
+    // Reveal animations
+    const io = new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}})},{threshold:.15,rootMargin:'0px 0px -50px 0px'});
+    document.querySelectorAll('.fade-in, .motion-card').forEach(el=>io.observe(el));
+
+    // Weather via Open-Meteo (no key)
+    async function fetchWeather(){
+      try{
+        const r=await fetch('https://api.open-meteo.com/v1/forecast?latitude=23.0225&longitude=72.5714&current_weather=true&timezone=auto');
+        const d=await r.json();
+        document.getElementById('temperature').textContent=`${d.current_weather.temperature}°C`;
+        document.getElementById('description').textContent=`Wind ${d.current_weather.windspeed} km/h`;
+      }catch(e){
+        document.getElementById('temperature').textContent='—';
+        document.getElementById('description').textContent='Weather unavailable';
+      }
+    }
+    fetchWeather();
+
+    // Lightbox
+    const lb=document.getElementById('lb'), lbInner=document.getElementById('lb-inner'), lbClose=document.getElementById('lb-close');
+    document.querySelectorAll('[data-lb="img"]').forEach(img=>{
+      img.style.cursor='zoom-in';
+      img.addEventListener('click',()=>{lb.classList.add('active');lbInner.innerHTML='';const big=new Image();big.src=img.src;big.alt=img.alt||'';lbInner.appendChild(big);});
+    });
+    lbClose.addEventListener('click',()=>lb.classList.remove('active'));
+    lb.addEventListener('click',(e)=>{if(e.target===lb)lb.classList.remove('active')});
+
+    // Navbar effect
+    window.addEventListener('scroll',()=>{
+      const nav=document.querySelector('.nav-fixed');
+      if(window.scrollY>100){nav.style.background='rgba(254,249,243,.98)';nav.style.boxShadow='0 2px 20px rgba(0,0,0,.1)'}
+      else{nav.style.background='rgba(254,249,243,.95)';nav.style.boxShadow='none'}
+    });
+
+    // ===== Robust image fallback (prevents broken images) =====
+    const FALLBACK_SVG = 'data:image/svg+xml;utf8,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="%23F15A29" offset="0"/><stop stop-color="%236A0572" offset="1"/></linearGradient></defs><rect fill="url(%23g)" width="100%" height="100%"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="white" font-family="Arial" font-size="42">Image preview</text></svg>');
+
+    function attachImageFallback(img){
+      if(img.dataset._bound) return;
+      img.dataset._bound = 'true';
+      img.addEventListener('error', function onErr(){
+        // Try alternate source first
+        const alt = img.getAttribute('data-alt-src');
+        if(alt && !img.dataset._triedAlt){
+          img.dataset._triedAlt = '1';
+          img.src = alt;
+          return;
+        }
+        // Finally, graceful fallback
+        img.src = FALLBACK_SVG;
+      });
+    }
+    document.querySelectorAll('img.js-safe').forEach(attachImageFallback);
+
+    // ===== Simple slider =====
+    const slides = document.getElementById('slides');
+    let idx = 0;
+    function go(n){
+      const count = slides.children.length;
+      idx = (n + count) % count;
+      slides.style.transform = `translateX(-${idx * 100}%)`;
+    }
+    document.getElementById('prev').addEventListener('click',()=>go(idx-1));
+    document.getElementById('next').addEventListener('click',()=>go(idx+1));
+    // auto-play (pause if you prefer)
+    setInterval(()=>go(idx+1), 6000);
+  </script>
+</body>
+</html>
